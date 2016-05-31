@@ -29,20 +29,37 @@ $low : #008000;
   h1, h2, label{
     color: $gray;
   }
+  label{
+    font-size: 20px;
+  }
   background-color: $darkgray;
   .task-form {
     margin-top: 80px;
     margin-bottom: 80px;
+    input, select{
+      width: 100%;
+    }
   }
 }
 .add-button {
+  margin-top: 20px;
   margin-bottom: 10px;
-  margin-left: 10px;
+  margin-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+.mycheckbox{
+  input{
+    margin-left: 16px;
+  }
+
 }
 
 .filter {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.header{
+  font-size: 5vmin;
+  text-align: center;
 }

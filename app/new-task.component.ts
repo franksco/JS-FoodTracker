@@ -7,17 +7,23 @@ import {Task} from './task.model';
   template: `
     <div class="task-form">
       <h3>Create Task:</h3>
-      <input placeholder="Description" class="col-sm-8 input-lg" #newDescription>
-      <select class="form-control" class="col-sm-8 input-lg" #newPriority>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
-      <select class="form-control" class="col-sm-8 input-lg" #newCategory>
-        <option value="home">Home</option>
-        <option value="work">Work</option>
-        <option value="hobby">Hobby</option>
-      </select>
+      <div class="col-md-4">
+        <input placeholder="Description" class="input-lg" #newDescription>
+      </div>
+      <div class="col-md-4">
+        <select class="form-control" class="input-lg" #newPriority>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <select class="form-control" class="input-lg" #newCategory>
+          <option value="home">Home</option>
+          <option value="work">Work</option>
+          <option value="hobby">Hobby</option>
+        </select>
+      </div>
       <button (click)="addTask(newDescription, newPriority, newCategory)" class="btn btn-success btn-lg add-button">Add</button>
     </div>
   `

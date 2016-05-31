@@ -5,7 +5,7 @@ import { Task } from './task.model';
     selector: 'task-display',
     inputs: ['task'],
   template: `
-  <div>
+  <div class="mycheckbox">
     <input *ngIf="task.done" type="checkbox" checked (click)="toggleDone(false)"/>
     <input *ngIf="!task.done" type="checkbox" (click)="toggleDone(true)"/>
     <label><del *ngIf="task.done">{{ task.description }}, {{ task.priority}}, {{ task.category}}</del><span *ngIf="!task.done">{{ task.description }}, {{  task.priority}}, {{ task.category}}</span></label>

@@ -7,7 +7,7 @@ import { Task } from './task.model';
   directives: [TaskListComponent],
   template: `
     <div class="container">
-      <h1>To-Do List</h1>
+      <h1 class="header">To-Do List</h1>
       <task-list
         [taskList]="tasks"
         (onTaskSelect)="taskWasSelected($event)">
