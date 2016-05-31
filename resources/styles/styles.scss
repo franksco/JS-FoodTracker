@@ -1,3 +1,14 @@
-h1 {
-  color: blue;
+$darkgray : #333;
+$gray : #d3d3d3;
+$selected : #22bdf0;
+.selected {
+  h3{
+    color: $selected !important;
+  }
+}
+.container{
+  h1, h2, h3 {
+    color: $gray;
+  }
+  background-color: $darkgray;
 }
