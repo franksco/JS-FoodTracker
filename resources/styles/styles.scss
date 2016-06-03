@@ -5,22 +5,25 @@ $high : #CC0000;
 $medium : #E59400;
 $low : #008000;
 
+body {
+  background: url(../../resources/images/Healthy-Foods.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .selected {
   label{
     color: $selected !important;
   }
 }
-.high {
+.unhealthy {
   label{
     color: $high !important;
   }
 }
-.medium {
-  label{
-    color: $medium !important;
-  }
-}
-.low {
+.healthy {
   label{
     color: $low !important;
   }
@@ -29,7 +32,7 @@ $low : #008000;
   input, select{
     width: 100%;
   }
-  h1, h2, label{
+  h1, h2, h3, label{
     color: $gray;
   }
   label{

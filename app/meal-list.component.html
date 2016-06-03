@@ -8,12 +8,12 @@
 
 <meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
   (click)="mealClicked(currentMeal)"
-  [class.high]="currentMeal.priority === 'high'"
-  [class.medium]="currentMeal.priority === 'medium'"
-  [class.low]="currentMeal.priority === 'low'"
+  [class.unhealthy]="currentMeal.calories >= 500"
+  [class.healthy]="currentMeal.calories < 500"
   [class.selected]="currentMeal === selectedMeal"
   [meal]="currentMeal">
 </meal-display>
 <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
 </edit-meal-details>
 <new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
+<h3 *ngIf="getTotalCalories()>0" >Total Calories for the day: {{ getTotalCalories() }}</h3>

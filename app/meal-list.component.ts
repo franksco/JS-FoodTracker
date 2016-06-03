@@ -15,7 +15,7 @@ import {HealthyPipe} from './healthy.pipe';
 })
 
 export class MealListComponent {
-  public mealList: Meal[];
+  public mealList: Meal[] = [];
   public onMealSelect: EventEmitter<Meal>;
   public selectedMeal: Meal;
   public filterHealthy: string = "all";
@@ -32,5 +32,14 @@ export class MealListComponent {
   }
   onChangeHealthy(filterOption) {
     this.filterHealthy = filterOption;
+  }
+  getTotalCalories(): number {
+    var totalCalories: any = 0;
+    this.mealList.forEach(function(meal){
+      if(meal.calories){
+        totalCalories += meal.calories;
+      }
+    });
+    return totalCalories;
   }
 }
