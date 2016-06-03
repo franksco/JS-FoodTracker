@@ -1,31 +1,31 @@
 import { Component } from 'angular2/core';
-import { TaskListComponent } from './task-list.component';
-import { Task } from './task.model';
+import { MealListComponent } from './meal-list.component';
+import { Meal } from './meal.model';
 
 @Component({
   selector: 'my-app',
-  directives: [TaskListComponent],
+  directives: [MealListComponent],
   template: `
     <div class="container">
       <h1 class="header">To-Do List</h1>
-      <task-list
-        [taskList]="tasks"
-        (onTaskSelect)="taskWasSelected($event)">
-      </task-list>
+      <meal-list
+        [mealList]="meals"
+        (onMealSelect)="mealWasSelected($event)">
+      </meal-list>
     </div>
   `
 })
 
 export class AppComponent {
-  public tasks: Task[];
+  public meals: Meal[];
      constructor(){
-       this.tasks = [
-        new Task("Create To-Do List app.", 0, "high", "work"),
-        new Task("Learn Kung Fu.", 1 , "low", "hobby"),
-        new Task("Rewatch all the Lord of the Rings movies.", 2, "low", "hobby"),
-        new Task("Do the laundry.", 3, "medium", "home")
+       this.meals = [
+        new Meal("Oatmeal", "with raisins, and little brown sugar", 450, 0),
+        new Meal("Carrots with Ranch", "1 cup of carrots and a 1/4 ranch", 150, 1),
+        new Meal("Bacon Cheeseburger", "got extra bacon", 800, 2),
+        new Meal("Cheesecake", "the raspberry kind", 650, 3)
       ];
      }
-  taskWasSelected(clickedTask: Task): void {
+  mealWasSelected(clickedMeal: Meal): void {
   }
 }

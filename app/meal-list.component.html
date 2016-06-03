@@ -1,0 +1,19 @@
+<div class="col-md-12">
+  <select (change)="onChangeHealthy($event.target.value)" class="form-control filter">
+    <option value="healthy">Show all Healthy Meals</option>
+    <option value="unHealthy">Show all un-Healthy Meals</option>
+    <option value="all" selected="selected">Show all</option>
+  </select>
+</div>
+
+<meal-display *ngFor="#currentMeal of mealList | healthy:filterHealthy"
+  (click)="mealClicked(currentMeal)"
+  [class.high]="currentMeal.priority === 'high'"
+  [class.medium]="currentMeal.priority === 'medium'"
+  [class.low]="currentMeal.priority === 'low'"
+  [class.selected]="currentMeal === selectedMeal"
+  [meal]="currentMeal">
+</meal-display>
+<edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
+</edit-meal-details>
+<new-meal (onSubmitNewMeal)="createMeal($event)"></new-meal>
