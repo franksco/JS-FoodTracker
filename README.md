@@ -1,6 +1,6 @@
-# Git Info
+# Food Tracker
 
-#### JavaScript Week 1 Independent Project
+#### JavaScript Week 2 Independent Project
 
 #### by Cory Franks 6/03
 ## Description
