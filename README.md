@@ -1,6 +1,6 @@
 # Food Tracker
 
-#### JavaScript Week 2 Independent Project
+#### JavaScript Week 2 Code Review
 
 #### by Cory Franks 6/03
 ## Description
